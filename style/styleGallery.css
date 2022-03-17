@@ -1,0 +1,257 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Colors */
+  --clr__background01: rgb(195, 189, 254);
+  --clr__background02: rgb(101, 97, 164);
+  --clr__background03: rgb(185, 181, 248);
+  --clr__accent: yellow;
+
+  --clr__light: rgb(255, 255, 255);
+  --clr__paragraph: rgb(0, 0, 0);
+
+  /* Typography */
+
+  --ff__head01: "Vollkorn", serif;
+  --ff__head02: "Bree Serif", serif;
+  --ff__head03: "Supermercado One", cursive;
+  --ff__bread01: "Kumbh Sans", sans-serif;
+
+  --ff__surprise01: "Patua One", cursive;
+
+  --fs__small01: 2em;
+  --fs__h1: 3em;
+  --fs__h2: 3em;
+  --fs__h3: 1.5em;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* *********** */
+/* Fonts, background, general parent-element sizing */
+/* *********** */
+
+h1 {
+  font-size: 5.58em;
+  color: black;
+  margin: 0;
+  padding: 0;
+  word-wrap: break-word;
+  line-height: 0.83em;
+  text-align: start;
+  letter-spacing: -0.1em;
+}
+
+p {
+  font-family: var(--ff__bread01);
+}
+
+#projects,
+#about_me,
+#skills,
+#contact {
+  color: var(--clr__accent);
+}
+
+body {
+  height: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+}
+
+.leftRight__container {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 30% 70%;
+  grid-template-areas: "left right";
+}
+
+.left {
+  grid-area: left;
+  height: 100%;
+  width: 100%;
+}
+
+.right {
+  grid-area: right;
+  height: 100%;
+}
+
+footer {
+  background-color: var(--clr__accent);
+  text-align: center;
+  padding: 0.625em;
+}
+
+/* *********** */
+/* Nav General */
+/* *********** */
+
+nav {
+  position: fixed;
+  margin-top: 1em;
+  padding: 0.313em 0.938em 0.313em;
+  z-index: 2;
+  background-color: var(--clr__light);
+}
+
+nav li {
+  display: inline;
+  font-family: var(--ff__bread01);
+  font-size: var(--fs__h3);
+  margin-right: 0.7em;
+  cursor: pointer;
+}
+
+nav a {
+  color: black;
+  padding: 0.5em;
+}
+
+nav a:link {
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: var(--clr__light);
+}
+
+.h1__container {
+  height: 100%;
+  width: 6em;
+  position: fixed;
+  background-color: white;
+  left: 0;
+  top: -2px;
+}
+
+/* ************* */
+/* Intro General */
+/* ************* */
+
+.intro__section {
+  height: 0;
+  display: flex;
+  text-align: center;
+}
+
+.intro__section > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* *********** */
+/* Gallery General */
+/* *********** */
+
+.gallery__section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+}
+
+.gallery__container {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 33% 33% 33%;
+  grid-template-areas:
+    "photo1 photo2 photo3"
+    "photo1 photo4 photo4"
+    "photo5 photo6 photo7"
+    "photo8 photo8 photo9";
+  gap: 0.2em;
+}
+
+.photo {
+  background-size: cover;
+  background-position-y: center;
+}
+
+.photo1 {
+  grid-area: photo1;
+
+  background-color: aqua;
+  background-image: url("/img/jeffwall_01.jpeg");
+  background-position-y: center;
+}
+
+.photo2 {
+  grid-area: photo2;
+
+  background-color: rgb(255, 0, 0);
+  background-image: url("/img/jeffwall_02.jpg");
+
+  background-position-x: center;
+}
+.photo3 {
+  grid-area: photo3;
+  background-color: rgb(179, 255, 0);
+  background-image: url("/img/jeffwall_03.jpg");
+
+  background-position-y: center;
+}
+.photo4 {
+  grid-area: photo4;
+
+  background-color: rgb(98, 0, 255);
+  background-image: url("/img/jeffwall_01.jpeg");
+}
+.photo5 {
+  grid-area: photo5;
+
+  background-color: rgb(255, 0, 98);
+  background-image: url("/img/jeffwall_02.jpg");
+}
+.photo6 {
+  grid-area: photo6;
+
+  background-color: rgb(55, 255, 0);
+  background-image: url("/img/jeffwall_03.jpg");
+}
+.photo7 {
+  grid-area: photo7;
+
+  background-color: rgb(255, 0, 119);
+  background-image: url("/img/jeffwall_01.jpeg");
+}
+.photo8 {
+  grid-area: photo8;
+
+  background-color: rgb(255, 0, 119);
+  background-image: url("/img/jeffwall_01.jpeg");
+}
+.photo9 {
+  grid-area: photo9;
+
+  background-color: rgb(255, 0, 119);
+  background-image: url("/img/jeffwall_01.jpeg");
+}
+
+/* *********** */
+/* FOOTER GENERAL */
+/* *********** */
+
+.footer__section {
+  align-self: baseline;
+  padding-left: 6em;
+}
+
+.footer a {
+  text-decoration: none;
+  font-family: var(--ff__bread01);
+  font-size: 0.8em;
+  color: rgb(215, 215, 3);
+}

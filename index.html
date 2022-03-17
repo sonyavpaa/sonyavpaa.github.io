@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style/style.css" />
+    <!-- the font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bree+Serif&family=Copse&family=Crete+Round&family=Cutive+Mono&family=Fredoka+One&family=Kumbh+Sans:wght@100;500&family=Notable&family=Noto+Sans&family=Patua+One&family=Roboto+Slab:wght@500&family=Shrikhand&family=Supermercado+One&family=Timmana&family=Vollkorn&family=Work+Sans&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- icons link -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <title>Portfolio</title>
+  </head>
+  <body>
+    <div id="stickyContainer">
+      <div id="logoBox" class="animate">
+        <div class="logo"></div>
+        <div class="projects__text__container">
+          <p id="projects__text"></p>
+        </div>
+      </div>
+      <div id="logoBox1"><img src="/img/sunglasses.png" alt="" /></div>
+    </div>
+    <!-- Intro -->
+    <section class="intro__section">
+      <div>
+        <nav class="desktopNav">
+          <ul>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#about_me">About Me</a></li>
+            <li><a href="#skills">Skills</a></li>
+          </ul>
+          <a class="gitHub" href="https://github.com/sonyavpaa"
+            ><img src="/img/GitHub-Mark-Light-32px.png" alt="gitHub-logo"
+          /></a>
+        </nav>
+        <nav class="mobileNav">
+          <a class="mobileNavIcon"
+            ><span class="material-icons"> menu </span></a
+          >
+          <ul>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#about_me">About Me</a></li>
+            <li><a href="#skills">Skills</a></li>
+          </ul>
+        </nav>
+        <h1>PANCAKE PORTFOLIO</h1>
+        <div class="welcome__container">
+          <input
+            type="text"
+            name="userName"
+            id="userName"
+            placeholder="whats your name, my dear?"
+          />
+
+          <div class="welcomeText__container"><p class="welcomeText"></p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects__section">
+      <h2 id="projects">PROJECTS</h2>
+      <div class="boxes">
+        <div class="left"></div>
+        <div class="right">
+          <div class="projects">
+            <div class="projects__div">
+              <div class="pancakes pancake__container1">
+                <a href="/gallery.html">
+                  <img
+                    class="pancake1"
+                    src="/img/pancake_01.jpg"
+                    alt="pancakes"
+                  />
+                  <div class="pancaketext pancaketext1"><p>PANCAKE I</p></div>
+                </a>
+                <div class="pancaketext__device"><p></p></div>
+              </div>
+
+              <div class="pancakes pancake__container2">
+                <a href="/luvindex.html">
+                  <img
+                    class="pancake2"
+                    src="/img/pancake_02.jpg"
+                    alt="pancakes"
+                  />
+                  <div class="pancaketext pancaketext2"><p>PANCAKE II</p></div>
+                </a>
+                <div class="pancaketext__device"><p></p></div>
+              </div>
+
+              <div class="pancakes pancake__container3">
+                <a href="#">
+                  <img
+                    class="pancake3"
+                    src="/img/pancake_03.jpg"
+                    alt="pancakes"
+                  />
+                  <div class="pancaketext pancaketext3"><p>PANCAKE III</p></div>
+                </a>
+                <div class="pancaketext__device"><p></p></div>
+              </div>
+
+              <div class="pancakes pancake__container4">
+                <a href="#">
+                  <img
+                    class="pancake4"
+                    src="/img/table_01.jpg"
+                    alt="pancakes"
+                  />
+                  <div class="pancaketext pancaketext4"><p>PANCAKE IV</p></div>
+                </a>
+                <div class="pancaketext__device"><p></p></div>
+              </div>
+
+              <div class="pancakes pancake__container5">
+                <a href="#">
+                  <img
+                    class="pancake5"
+                    src="/img/table_01.jpg"
+                    alt="pancakes"
+                  />
+                  <div class="pancaketext pancaketext5"><p>PANCAKE V</p></div>
+                </a>
+                <div class="pancaketext__device"><p></p></div>
+              </div>
+
+              <div class="pancakes pancake__container6">
+                <a href="#">
+                  <img
+                    class="pancake6"
+                    src="/img/table_01.jpg"
+                    alt="pancakes"
+                  />
+                  <div class="pancaketext pancaketext6"><p>PANCAKE VI</p></div>
+                </a>
+                <div class="pancaketext__device"><p></p></div>
+              </div>
+            </div>
+            <!--- closing .projects__div -->
+          </div>
+          <!--- closing .projects -->
+        </div>
+        <!--- closing .right -->
+      </div>
+      <!--- closing .boxes -->
+    </section>
+
+    <!-- About me -->
+    <section class="about_me">
+      <h2 id="about_me">ME LE PROGRAMMER</h2>
+      <div class="boxes">
+        <div class="left"></div>
+        <div class="right">
+          <div class="about_me__p__container">
+            <p>
+              Dear <span id="helloName">You</span>, this portfolio is an insight
+              into my skills gained in my web dev studies in Business College
+              Helsinki. It is intended to showcase my current level in coding
+              and having fun with it! <br /><br />
+              My current top 3 interests in web dev:
+              <span class="top3">gamification</span>,
+              <span class="top3">pixel art</span>,
+              <span class="top3">backend</span>.
+            </p>
+            <div class="glassHelp">
+              <p>
+                (pssst.... bit embarassing, but can you help me with the
+                glasses?) <span id="leftArrow">&lt;</span
+                ><span id="rightArrow">></span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="skills">
+      <h2 id="skills">SKILLS</h2>
+      <div class="skills__div__center">
+        <div class="skills__div">
+          <p>
+            Besides web dev studies, I do photography and some other artsy stuff
+            when ever I can. Here's the languages and software I am working
+            with:
+          </p>
+
+          <div class="skills__icons">
+            <img src="/img/adobe-photoshop.png" alt="photoshop" />
+            <img src="/img/indesign.png" alt="indesign" />
+            <img src="/img/css.png" alt="css" />
+            <img src="/img/html-5.png" alt="html" />
+            <img src="/img/js.png" alt="javascript" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- contact form -->
+
+    <div class="contactform">
+      <div class="contactform__wrapper">
+        <h2 id="contact">SAY HI</h2>
+        <h3>Tell me your deepest fears</h3>
+
+        <div class="contactform__div">
+          <form id="contactform" action="URL">
+            <input type="text" placeholder="Your name" id="name" />
+
+            <input type="email" placeholder="Your email" id="email" />
+
+            <textarea
+              name="message"
+              placeholder="Your stories"
+              rows="10"
+            ></textarea>
+            <input type="submit" id="button" value="Send it!" />
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer -->
+
+    <footer class="footer">
+      <div>
+        <p>Copyright Sonya Web 2022</p>
+        <a href="https://www.flaticon.com/free-icons/adobe" title="adobe icons"
+          >Adobe icons created by riajulislam - Flaticon</a
+        >
+        ||
+        <a href="https://www.flaticon.com/free-icons/css" title="css icons"
+          >Css & Html icons created by Pixel perfect - Flaticon</a
+        >
+        ||
+        <a href="https://www.flaticon.com/free-icons/js" title="js icons"
+          >Js icons created by Freepik - Flaticon</a
+        >
+        ||
+        <a
+          href="https://www.flaticon.com/free-icons/sunglasses"
+          title="sunglasses icons"
+          >Sunglasses icons created by Freepik - Flaticon</a
+        >
+      </div>
+    </footer>
+
+    <script src="/js/main.js"></script>
+  </body>
+</html>

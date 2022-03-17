@@ -1,0 +1,871 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Colors */
+  --clr__background01: rgb(195, 189, 254);
+  --clr__background02: rgb(101, 97, 164);
+  --clr__background03: rgb(185, 181, 248);
+  --clr__accent: rgb(255, 255, 0);
+
+  --clr__light: rgb(255, 255, 255);
+  --clr__paragraph: rgb(0, 0, 0);
+
+  /* Typography */
+
+  --ff__head01: "Vollkorn", serif;
+  --ff__head02: "Bree Serif", serif;
+  --ff__head03: "Supermercado One", cursive;
+  --ff__bread01: "Kumbh Sans", sans-serif;
+
+  --ff__surprise01: "Patua One", cursive;
+
+  --fs__small01: 2em;
+  --fs__h1: 3em;
+  --fs__h2: 3em;
+  --fs__h3: 1.5em;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#stickyContainer {
+  position: absolute;
+  right: 0;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section:nth-child(odd) {
+  background-color: var(--clr__background03);
+}
+
+/* *********** */
+/* ANIMATIONS  */
+/* *********** */
+
+.animate {
+  animation: shake 3000ms;
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  0% {
+    left: 76.1%;
+    top: 19%;
+  }
+
+  20% {
+    left: 76.2%;
+  }
+
+  50% {
+    top: 20%;
+  }
+
+  60% {
+    left: 76%;
+  }
+
+  100% {
+    left: 76.15%;
+    top: 19%;
+  }
+}
+
+/* *********** */
+/* Fonts, background, general parent-element sizing */
+/* *********** */
+
+h1 {
+  font-size: var(--fs__h1);
+  color: var(--clr__light);
+  font-family: var(--ff__head01);
+
+  margin-top: 0.3em;
+  padding: 0.625em;
+  top: 3%;
+
+  text-align: center;
+}
+
+h2 {
+  font-family: var(--ff__head01);
+  font-size: var(--fs__h2);
+  color: var(--clr__light);
+
+  padding-top: 1em;
+
+  text-align: center;
+}
+
+h3 {
+  font-family: var(--ff__head01);
+  font-size: var(--fs__h3);
+  color: var(--clr__light);
+}
+
+p {
+  font-family: var(--ff__bread01);
+}
+
+#projects,
+#about_me,
+#skills,
+#contact {
+  color: var(--clr__accent);
+}
+
+body {
+  height: 100%;
+  background-color: var(--clr__background01);
+}
+
+section {
+  width: 100%;
+}
+
+div {
+  width: 100%;
+}
+
+.boxes {
+  height: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.left {
+  right: 0;
+  width: 35%;
+}
+
+.right {
+  width: 100%;
+  left: 0;
+}
+
+footer {
+  background-color: var(--clr__accent);
+  text-align: center;
+  padding: 0.625em;
+}
+
+/* *********** */
+/* Nav General */
+/* *********** */
+
+.desktopNav {
+  position: fixed;
+  margin-top: 1em;
+  padding: 0.313em 0.938em 0.313em;
+  z-index: 2;
+  background-color: transparent;
+}
+
+.desktopNav li {
+  display: inline;
+  font-family: var(--ff__bread01);
+  font-size: var(--fs__h3);
+  margin-right: 0.7em;
+  cursor: pointer;
+}
+
+.desktopNav a,
+.mobileNav a {
+  color: var(--clr__accent);
+  padding: 0.5em;
+}
+
+.desktopNav a:link,
+.mobileNav a:link {
+  text-decoration: none;
+}
+
+.desktopNav a:hover {
+  color: var(--clr__light);
+}
+
+.mobileNav {
+  visibility: hidden;
+}
+
+.gitHub img {
+  margin-top: 0.5em;
+}
+
+/* ************* */
+/* Intro General */
+/* ************* */
+
+.intro__section {
+  display: flex;
+  height: 90vh;
+  text-align: center;
+}
+
+.intro__section > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.intro__section h2 {
+  padding-top: 3em;
+}
+
+#logoBox {
+  width: 20em;
+  height: 30em;
+  position: sticky;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+
+  z-index: 0;
+}
+
+.logo {
+  border-radius: 50%;
+
+  width: 20em;
+  height: 20em;
+  background-color: var(--clr__light);
+  background-image: url(/img/logo.png);
+  background-size: contain;
+  background-size: 13em;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: 1em;
+}
+
+#logoBox1 {
+  position: sticky;
+  top: 2000px;
+  z-index: 2;
+  margin-left: 3.2em;
+  width: 20.5em;
+  height: 30em;
+  margin-bottom: 5em;
+  display: flex;
+  flex-direction: column;
+  display: none;
+}
+
+#logoBox1 img {
+  margin-left: 22%;
+  width: 6em;
+  transform: rotate(-5deg);
+}
+
+.welcome__container {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.welcome__container input {
+  z-index: 1;
+  margin-top: 7em;
+  width: 15em;
+  background-color: var(--clr__background01);
+  border: 1px solid var(--clr__accent);
+  text-align: center;
+}
+
+.welcome__container input:focus {
+  outline: none;
+}
+
+.welcomeText__container {
+  z-index: 0;
+  opacity: 0;
+  width: 70%;
+  position: absolute;
+  left: 0%;
+  margin-top: 5em;
+  margin-left: 3em;
+  height: 10em;
+}
+
+.welcomeText {
+  text-align: left;
+  padding-left: 0.5em;
+  font-size: 4em;
+  font-family: var(--ff__head01);
+  color: rgb(255, 249, 83);
+}
+
+.hide {
+  opacity: 0;
+}
+
+.show {
+  opacity: 1;
+  /* transition: opacity 0.5s ease-in; */
+}
+
+/* *********** */
+/* Projects General */
+/* *********** */
+
+#projects__section {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.projects__text__container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1em;
+  height: 5em;
+  width: 100%;
+  margin-bottom: 3.125em;
+}
+
+#projects__text {
+  font-family: var(--ff__head01);
+  font-style: italic;
+  font-size: 1.2em;
+  color: var(--clr__accent);
+}
+
+.projects {
+  width: 100%;
+  padding-bottom: 3.125em;
+  display: flex;
+  flex-direction: column;
+}
+
+.projects a {
+  text-decoration: none;
+}
+
+.projects__div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1.5em;
+  padding-left: 1em;
+}
+
+.projects__div div {
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.projects a {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+}
+
+.pancakes:hover {
+  opacity: 0.7;
+  filter: grayscale(0);
+}
+
+.pancakes {
+  width: 20em;
+  height: 20em;
+
+  opacity: 0.4;
+  display: flex;
+  filter: grayscale(1);
+}
+
+.pancakes img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.pancakes div {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  transition: all 0.2s ease-in-out;
+
+  opacity: 0;
+}
+
+.pancakes div p {
+  width: 100%;
+  height: 100%;
+
+  padding-top: 0.06em;
+
+  padding-bottom: 1em;
+  border: 10px solid var(--clr__accent);
+
+  word-wrap: break-word;
+  line-height: 0.8em;
+
+  font-size: 7.5em;
+  font-family: var(--ff__bread01);
+  color: var(--clr__accent);
+}
+
+.pancake__container1:hover .pancaketext,
+.pancake__container2:hover .pancaketext,
+.pancake__container3:hover .pancaketext,
+.pancake__container4:hover .pancaketext,
+.pancake__container5:hover .pancaketext,
+.pancake__container6:hover .pancaketext {
+  opacity: 1;
+}
+
+.pancaketext__device {
+  visibility: hidden;
+  margin-top: 0.5em;
+  font-family: var(--ff__head01);
+  font-size: 1.2em;
+}
+
+/* *********** */
+/* About General */
+/* *********** */
+
+.about_me {
+  width: 100%;
+  height: 70vh;
+  min-height: 40em;
+}
+
+.about_me__p__container {
+  height: 80%;
+  width: 100%;
+  margin-top: 1em;
+}
+
+.about_me__p__container p {
+  width: 98%;
+  font-size: 2.7em;
+  padding-left: 1em;
+}
+
+#helloName {
+  color: var(--clr__accent);
+}
+
+.top3 {
+  font-family: var(--ff__surprise01);
+  color: rgb(238, 238, 238);
+}
+
+.glassHelp {
+  width: 100%;
+  font-size: 0.4em;
+
+  display: flex;
+  text-align: center;
+  margin-top: 3em;
+  display: none;
+}
+
+.glassHelp p {
+  width: 100%;
+  margin-top: 2em;
+  color: var(--clr__accent);
+}
+
+.glassHelp span {
+  margin: 0 2em;
+  color: rgb(255, 249, 83);
+}
+
+#leftArrow,
+#rightArrow {
+  cursor: pointer;
+}
+
+/* *********** */
+/* Skills General */
+/* *********** */
+
+.skills {
+  width: 100%;
+  padding-bottom: 3em;
+}
+
+.skills__div__center {
+  display: flex;
+  justify-content: center;
+}
+
+.skills__div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+}
+
+.skills__icons {
+  width: 100%;
+  margin-top: 2em;
+  display: flex;
+  overflow-x: scroll;
+}
+
+.skills p {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  width: 21em;
+  text-align: center;
+  font-family: var(--ff__bread01);
+  color: var(--clr__light);
+}
+
+.skills__icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  overflow-x: scroll;
+}
+
+.skills__icons img {
+  width: 15em;
+  height: 15em;
+  padding: 0.5em;
+}
+
+/* *********** */
+/* Contact Form General */
+/* *********** */
+
+.contactform {
+  background-color: var(--clr__background02);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contactform__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+form {
+  display: grid;
+  width: 20em;
+  text-align: center;
+  margin: auto;
+  margin-bottom: 3em;
+}
+
+input,
+textarea {
+  border-radius: 0.2em;
+  border-style: none;
+  margin-bottom: 0.3em;
+  padding: 0.5em;
+  background: var(--clr__background03);
+  font-family: var(--ff__head01);
+}
+
+input {
+  height: 2.3em;
+  font-size: 1em;
+}
+
+/* *********** */
+/* FOOTER GENERAL */
+/* *********** */
+
+.footer a {
+  text-decoration: none;
+  font-family: var(--ff__bread01);
+  font-size: 0.8em;
+  color: rgb(215, 215, 3);
+}
+
+/* *********** */
+/* Positioning inside intro, nav, projects and about me and image sizing for tablets like iPad */
+/* *********** */
+
+@media (max-width: 1300px) {
+  #logoBox {
+    width: 15em;
+    height: 25em;
+    justify-content: center;
+  }
+
+  .logo {
+    width: 15em;
+    height: 15em;
+    background-size: 9em;
+  }
+
+  .intro__section h1 {
+    margin: 0;
+    padding: 0;
+    margin-top: 1em;
+  }
+
+  .pancakes {
+    width: 15em;
+    height: 15em;
+  }
+
+  .pancaketext {
+    font-size: 0.7em;
+  }
+
+  .about_me {
+    height: 95vh;
+  }
+
+  .skills img {
+    width: 15em;
+    height: 15em;
+  }
+
+  .contactform {
+    height: 95vh;
+  }
+
+  /* tablet upright */
+
+  @media (max-width: 810px) {
+    h1 {
+      font-size: 4em;
+    }
+
+    .desktopNav {
+      display: none;
+    }
+
+    .mobileNav {
+      display: flex;
+      justify-content: center;
+    }
+
+    .mobileNavIcon span {
+      font-size: 4em;
+      padding-top: 0.5em;
+      cursor: pointer;
+    }
+
+    .mobileNav ul {
+      width: 100vw;
+      list-style: none;
+      padding: 2em 0;
+      position: absolute;
+      background-color: var(--clr__background03);
+      visibility: hidden;
+    }
+
+    .mobileNav li {
+      font-family: var(--ff__bread01);
+      font-size: var(--fs__h2);
+    }
+
+    .intro__section h1 {
+      margin: 1em 2em;
+      padding: 0;
+    }
+
+    #logoBox {
+      display: none;
+    }
+
+    .welcome__container {
+      display: none;
+    }
+
+    .welcomeText__container {
+      width: 100%;
+      margin: 0;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+    }
+
+    .welcome__container p {
+      width: 80%;
+      text-align: center;
+    }
+
+    .projects {
+      width: 100vw;
+      padding-bottom: 50px;
+    }
+
+    .pancakes div {
+      opacity: 1;
+      font-size: 0.9em;
+    }
+
+    .pancakes {
+      width: 18.75em;
+      height: 18.75em;
+      opacity: 0.6;
+      position: absolute;
+      filter: grayscale(0);
+    }
+
+    .pancakes img {
+      width: 18.75em;
+      height: 18.75em;
+      position: absolute;
+      object-fit: cover;
+    }
+
+    .projects__div {
+      margin-top: 1em;
+      padding-bottom: 0;
+      height: 25em;
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      overflow-x: scroll;
+      padding-left: 1em;
+    }
+
+    .projects__div div {
+      flex-wrap: wrap;
+      position: relative;
+    }
+
+    .pancaketext__device {
+      visibility: visible;
+      text-align: center;
+      color: var(--clr__light);
+    }
+
+    .pancaketext__device p {
+      font-size: 2em;
+    }
+
+    .about_me .left {
+      display: none;
+    }
+  }
+
+  .about_me {
+    padding-bottom: 50px;
+    height: 70vh;
+  }
+
+  .about_me__p__container {
+    text-align: center;
+  }
+
+  .about_me p {
+    font-size: 2.5em;
+  }
+
+  .skills__icons {
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+  }
+
+  .contactform {
+    height: 90vh;
+  }
+}
+
+/* *********** */
+/* Positioning inside intro, nav, projects and about me and image sizing for phones like iPhones SE (or tablet upwards) */
+/* *********** */
+
+/* iPhone SE sideways */
+
+@media (max-width: 667px) {
+  h1 {
+    font-size: 2em;
+  }
+
+  .mobileNav span {
+    padding-top: 0.2em;
+  }
+
+  .intro__section h1 {
+    font-size: 3em;
+    margin: 0;
+  }
+
+  .intro__section {
+    height: 75vh;
+  }
+
+  .welcome__container {
+    display: none;
+  }
+
+  .about_me {
+    height: 100vh;
+  }
+
+  .about_me p {
+    margin-top: 1em;
+    font-size: 2em;
+  }
+
+  .skills {
+    height: 150vh;
+  }
+
+  .contactform {
+    height: 200vh;
+  }
+
+  input {
+    height: 1.5em;
+    font-size: 1em;
+  }
+  #button {
+    text-align: center;
+    padding-bottom: 2em;
+  }
+
+  /* phone upright */
+
+  @media (max-width: 380px) {
+    h1 {
+      font-size: 3em;
+    }
+
+    .intro__section h2 {
+      font-size: 1.6em;
+    }
+
+    #logoBox {
+      margin-top: 2em;
+    }
+
+    .intro__section {
+      height: 100vh;
+    }
+
+    .about_me {
+      height: 100vh;
+    }
+
+    .about_me__p__container p {
+      font-size: 1.5em;
+    }
+
+    .skills {
+      height: 100vh;
+    }
+
+    .contactform {
+      height: 100vh;
+    }
+  }
+}

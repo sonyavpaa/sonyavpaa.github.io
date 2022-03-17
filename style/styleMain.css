@@ -1,0 +1,160 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Colors */
+  --clr__background01: rgb(195, 189, 254);
+  --clr__background02: rgb(101, 97, 164);
+  --clr__background03: rgb(185, 181, 248);
+  --clr__accent: yellow;
+
+  --clr__light: rgb(255, 255, 255);
+  --clr__paragraph: rgb(0, 0, 0);
+
+  /* Typography */
+
+  --ff__head01: "Vollkorn", serif;
+  --ff__head02: "Bree Serif", serif;
+  --ff__head03: "Supermercado One", cursive;
+  --ff__bread01: "Kumbh Sans", sans-serif;
+
+  --ff__surprise01: "Patua One", cursive;
+
+  --fs__small01: 2em;
+  --fs__h1: 3em;
+  --fs__h2: 3em;
+  --fs__h3: 1.5em;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* *********** */
+/* Fonts, background, general parent-element sizing */
+/* *********** */
+
+h1 {
+  font-size: var(--fs__h1);
+  color: var(--clr__light);
+  font-family: var(--ff__head01);
+
+  margin-top: 0.3em;
+  padding: 0.625em;
+  top: 3%;
+
+  text-align: center;
+}
+
+h2 {
+  font-family: var(--ff__head01);
+  font-size: var(--fs__h2);
+  color: var(--clr__light);
+
+  padding-top: 1em;
+
+  text-align: center;
+}
+
+h3 {
+  font-family: var(--ff__head01);
+  font-size: var(--fs__h3);
+  color: var(--clr__light);
+}
+
+p {
+  font-family: var(--ff__bread01);
+}
+
+#projects,
+#about_me,
+#skills,
+#contact {
+  color: var(--clr__accent);
+}
+
+body {
+  height: 100%;
+  background-color: var(--clr__background01);
+}
+
+section {
+  width: 100%;
+}
+
+div {
+  width: 100%;
+}
+
+footer {
+  background-color: var(--clr__accent);
+  text-align: center;
+  padding: 0.625em;
+}
+
+/* *********** */
+/* Nav General */
+/* *********** */
+
+nav {
+  position: fixed;
+  margin-top: 1em;
+  padding: 0.313em 0.938em 0.313em;
+  z-index: 2;
+  background-color: transparent;
+}
+
+nav li {
+  display: inline;
+  font-family: var(--ff__bread01);
+  font-size: var(--fs__h3);
+  margin-right: 0.7em;
+  cursor: pointer;
+}
+
+nav a {
+  color: var(--clr__accent);
+  padding: 0.5em;
+}
+
+nav a:link {
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: var(--clr__light);
+}
+
+/* ************* */
+/* Intro General */
+/* ************* */
+
+.intro__section {
+  display: flex;
+  height: 90vh;
+  text-align: center;
+}
+
+.intro__section > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* *********** */
+/* FOOTER GENERAL */
+/* *********** */
+
+.footer {
+  align-self: baseline;
+}
+
+.footer a {
+  text-decoration: none;
+  font-family: var(--ff__bread01);
+  font-size: 0.8em;
+  color: rgb(215, 215, 3);
+}
