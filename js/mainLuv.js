@@ -1,3 +1,5 @@
+const gameFrame = document.querySelector("#game");
+
 const circles = document.querySelectorAll(".circles");
 const scoreText01 = document.querySelector(".score");
 
@@ -6,6 +8,8 @@ const buttonStop = document.querySelector("#buttonStop");
 
 const alertBox = document.querySelector("#alertBox");
 const scoreText02 = document.querySelector(".scoreText");
+
+let device = "desktop";
 
 let score = 0;
 let circlesArr = [];
@@ -21,10 +25,23 @@ let randomNumber = (min, max) => {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 };
 
+window.onload = (e) => {
+  checkDevice();
+};
+
+// logges if device orientation is changed (90 or 0)
+window.addEventListener("orientationchange", function () {
+  checkDevice();
+  console.log(
+    `the orientation of the ${device} is now ` + screen.orientation.angle
+  );
+});
+
 function startGame() {
   nextCircle = randomNumber(0, 3);
   checkCircle(nextCircle);
   circles.forEach((circle) => {
+    circle.style.pointerEvents = "all";
     circle.style.backgroundColor = "";
     circle.querySelector("img").style.width = "6em";
     circle.querySelector("img").style.height = "6em";
@@ -44,6 +61,10 @@ function startGame() {
 
   timer = setTimeout(startGame, pace);
   pace = pace - 10;
+  rounds++;
+  if (rounds > 4) {
+    endGame();
+  }
 }
 
 circles.forEach((circle, i) =>
@@ -59,6 +80,7 @@ function clickedCircle(i) {
     luvPoint();
     score++;
     rounds--;
+
     scoreText01.textContent = score;
   }
 }
@@ -85,17 +107,17 @@ const alertGame = () => {
   alertBox.style.visibility = "visible";
   if (score <= 3) {
     scoreText02.innerHTML = `
-      <p>
-        ${score} <span>luvs</span>, c'mon...
-      </p>
+      
+        ${score}&nbsp;<span>luvs</span>, c'mon...
+      
     `;
   } else if (score > 3 && score <= 10) {
     scoreText02.innerHTML = `
-      <p>
-        ${score} <span>luvs</span>, youre a catch!
-      </p>`;
+      
+        ${score}&nbsp;<span>luvs</span>, youre a catch!
+      `;
   } else if (score > 10) {
-    scoreText02.innerHTML = `<p>${score} <span>luvs</span>, woooww save <span>luv</span> for the rest of us, Casanova!</p>`;
+    scoreText02.innerHTML = `${score}&nbsp;<span> luvs</span>, woooww save&nbsp;<span>luv</span>&nbsp;for the rest of us, Casanova!`;
   }
 
   alertBox.addEventListener("click", (event) => {
@@ -135,3 +157,35 @@ const luvPoint = () => {
   luvSound = new sound("/mp3/03.mp3");
   luvSound.play();
 };
+
+// checking device
+function checkDevice() {
+  const agent = navigator.userAgent.toLocaleLowerCase();
+  if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(agent)) {
+    device = "tablet";
+  } else if (
+    /mobile|android|ip(hone|od)|iemobile|blackberry|kindle|silk-accelerated|(hpw|web)os|opera m(obi|ini)/i.test(
+      agent
+    )
+  ) {
+    device = "mobile";
+  }
+  console.log(`using ${device}`);
+
+  if (device === "tablet") {
+  }
+  if (device === "mobile") {
+    document.querySelector("h1").style.margin = "0em";
+    gameFrame.style.width = "80vw";
+    gameFrame.style.margin = "0em";
+    gameFrame.style.transform = "scale(0.6)";
+    const alertMessage = document.querySelector(".alertMessage");
+    if (screen.orientation.angle === 0) {
+      gameFrame.style.transform = "scale(0.3)";
+      alertMessage.style.visibility = "visible";
+      alertMessage.querySelector("p").innerText = "Turn me around!";
+    } else if (screen.orientation.angle === 90) {
+      alertMessage.style.visibility = "hidden";
+    }
+  }
+}
