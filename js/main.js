@@ -21,6 +21,9 @@ const pancakeTextsDevice = document.querySelectorAll(".pancaketext__device");
 const aboutMe = document.querySelector(".about_me");
 const helloName = document.querySelector("#helloName");
 
+const skills = document.querySelector(".skills");
+const contactForm = document.querySelector(".contactform");
+
 const pancakeIDesc = "pancake I description";
 const pancakeIIDesc = "pancake II description";
 const pancakeIIIDesc = "pancake III description";
@@ -151,13 +154,18 @@ function checkDevice() {
     });
   }
   if (device === "mobile") {
-    navBar.style.visibility = "hidden";
+    navBar.style.display = "none";
     mobileNavIcon.style.visibility = "visible";
     mobileNavIcon.querySelector("span").style.fontSize = "3em";
-    mobileNav.style.marginTop = "1.5em";
     logoBox.style.display = "none";
     document.querySelector("h1").style.fontSize = "3em";
     document.querySelector("h1").style.marginTop = "0em";
+    const aboutMeContainer = document.querySelector(".about_me__p__container");
+    aboutMeContainer.style.display = "flex";
+    aboutMeContainer.style.justifyContent = "center";
+    aboutMeContainer.querySelector("p").style.padding = "0";
+    skills.style.height = "100vh";
+    contactForm.style.height = "100vh";
   }
   // logges if device orientation is changed (90 or 0)
   window.addEventListener("orientationchange", function () {

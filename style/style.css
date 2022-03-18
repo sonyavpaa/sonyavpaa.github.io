@@ -653,7 +653,6 @@ input {
     .mobileNav {
       display: flex;
       flex-direction: row;
-      margin: 0;
       padding: 0;
       width: 100%;
       justify-content: end;
@@ -663,6 +662,7 @@ input {
       font-size: 3em;
       padding-top: 0.5em;
       cursor: pointer;
+      margin-right: 0.2em;
     }
 
     .mobileNav ul {
@@ -673,6 +673,7 @@ input {
       background-color: var(--clr__background03);
       visibility: hidden;
       text-align: end;
+      border: 1px solid red;
     }
 
     .mobileNav li {
