@@ -139,6 +139,7 @@ function checkDevice() {
   console.log(`using ${device}`);
 
   if (device === "tablet") {
+    mobileNavVisible();
     // changes with pancake headers if tablet
     pancakeHeaders.forEach((header) => {
       header.style.opacity = "1";
@@ -163,6 +164,7 @@ function checkDevice() {
     console.log(
       `the orientation of the ${device} is now ` + screen.orientation.angle
     );
+    mobileNavVisible();
   });
 }
 // changing the bgc of nav and hiding gitHub when scrolling
@@ -195,6 +197,8 @@ function mobileNavVisible() {
         });
       });
     });
+  } else if (intro.offsetWidth >= 1070) {
+    mobileNav.style.visibility = "hidden";
   }
 }
 
