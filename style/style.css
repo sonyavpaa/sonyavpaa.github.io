@@ -645,33 +645,41 @@ input {
       font-size: 4em;
     }
 
-    .desktopNav {
+    .desktopNav,
+    #stickyContainer {
       display: none;
     }
 
     .mobileNav {
       display: flex;
-      justify-content: center;
+      flex-direction: row;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      justify-content: end;
     }
 
     .mobileNavIcon span {
-      font-size: 4em;
+      font-size: 3em;
       padding-top: 0.5em;
       cursor: pointer;
     }
 
     .mobileNav ul {
-      width: 100vw;
       list-style: none;
-      padding: 2em 0;
-      position: absolute;
+      width: 100%;
+      padding: 0.5em 0 2.5em 0;
+      position: fixed;
       background-color: var(--clr__background03);
       visibility: hidden;
+      text-align: end;
     }
 
     .mobileNav li {
       font-family: var(--ff__bread01);
-      font-size: var(--fs__h2);
+      font-size: var(--fs__h3);
+      margin: 0;
+      padding: 0;
     }
 
     .intro__section h1 {

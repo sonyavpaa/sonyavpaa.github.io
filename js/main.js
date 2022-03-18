@@ -149,6 +149,15 @@ function checkDevice() {
       pancake.style.opacity = "0.6";
     });
   }
+  if (device === "mobile") {
+    navBar.style.visibility = "hidden";
+    mobileNavIcon.style.visibility = "visible";
+    mobileNavIcon.querySelector("span").style.fontSize = "3em";
+    mobileNav.style.marginTop = "1.5em";
+    logoBox.style.display = "none";
+    document.querySelector("h1").style.fontSize = "3em";
+    document.querySelector("h1").style.marginTop = "0em";
+  }
   // logges if device orientation is changed (90 or 0)
   window.addEventListener("orientationchange", function () {
     console.log(
@@ -174,6 +183,7 @@ function mobileNavVisible() {
     mobileNav.style.visibility = "visible";
     mobileNavIcon.addEventListener("click", (e) => {
       mobileNavUl.style.visibility = "visible";
+      mobileNavUl.style.zIndex = "3";
 
       mobileNavUl.querySelectorAll("li").forEach((link) => {
         window.addEventListener("mouseup", (e) => {
@@ -181,11 +191,10 @@ function mobileNavVisible() {
         });
         link.addEventListener("click", (e) => {
           mobileNavUl.style.visibility = "hidden";
+          mobileNavUl.style.zIndex = "0";
         });
       });
     });
-  } else if (intro.offsetWidth > 810) {
-    mobileNav.style.visibility = "hidden";
   }
 }
 
