@@ -658,10 +658,6 @@ input {
       justify-content: end;
     }
 
-    .mobileNav, .mobileNavIcon {
-      cursor: pointer;
-
-    }
 
     .mobileNavIcon span {
       font-size: 3em;
