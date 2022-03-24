@@ -190,21 +190,23 @@ const navFunc = () => {
 
 function mobileNavVisible() {
   if (device === "mobile" || intro.offsetWidth <= 810) {
-    mobileNav.style.visibility = "visible";
-    mobileNavIcon.addEventListener("click", (e) => {
-      mobileNavUl.style.visibility = "visible";
-      mobileNavUl.style.zIndex = "3";
+    // mobileNav.style.visibility = "visible";
+    beMobile();
 
-      mobileNavUl.querySelectorAll("li").forEach((link) => {
-        window.addEventListener("mouseup", (e) => {
-          mobileNavUl.style.visibility = "hidden";
-        });
-        link.addEventListener("click", (e) => {
-          mobileNavUl.style.visibility = "hidden";
-          mobileNavUl.style.zIndex = "0";
-        });
-      });
-    });
+    // mobileNavIcon.addEventListener("click", (e) => {
+    //   mobileNavUl.style.visibility = "visible";
+    //   mobileNavUl.style.zIndex = "3";
+
+    //   mobileNavUl.querySelectorAll("li").forEach((link) => {
+    //     window.addEventListener("mouseup", (e) => {
+    //       mobileNavUl.style.visibility = "hidden";
+    //     });
+    //     link.addEventListener("click", (e) => {
+    //       mobileNavUl.style.visibility = "hidden";
+    //       mobileNavUl.style.zIndex = "0";
+    //     });
+    //   });
+    // });
   } else if (intro.offsetWidth >= 1070) {
     mobileNav.style.visibility = "hidden";
   }
@@ -239,3 +241,21 @@ const rightArrow = document.querySelector("#rightArrow");
 leftArrow.addEventListener("click", (e) => {
   console.log(logoBox1);
 });
+
+function beMobile () => {
+  mobileNav.style.visibility = "visible";
+     mobileNavIcon.addEventListener("click", (e) => {
+      mobileNavUl.style.visibility = "visible";
+      mobileNavUl.style.zIndex = "3";
+
+      mobileNavUl.querySelectorAll("li").forEach((link) => {
+        window.addEventListener("mouseup", (e) => {
+          mobileNavUl.style.visibility = "hidden";
+        });
+        link.addEventListener("click", (e) => {
+          mobileNavUl.style.visibility = "hidden";
+          mobileNavUl.style.zIndex = "0";
+        });
+      });
+    });
+}
