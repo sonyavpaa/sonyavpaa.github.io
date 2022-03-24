@@ -172,7 +172,7 @@ function checkDevice() {
     console.log(
       `the orientation of the ${device} is now ` + screen.orientation.angle
     );
-    mobileNavVisible();
+    mobileNavVisible(device);
   });
 }
 // changing the bgc of nav and hiding gitHub when scrolling
@@ -188,7 +188,7 @@ const navFunc = () => {
   }
 };
 
-function mobileNavVisible() {
+function mobileNavVisible(device) {
   if (device === "mobile" || intro.offsetWidth <= 810) {
     // mobileNav.style.visibility = "visible";
     beMobile();
