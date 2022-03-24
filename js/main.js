@@ -189,9 +189,9 @@ const navFunc = () => {
 };
 
 function mobileNavVisible(device) {
+    console.log("inside MobilenavVisible() before if");
   if (device === "mobile" || intro.offsetWidth <= 810) {
     // mobileNav.style.visibility = "visible";
-    console.log("inside MobilenavVisible()");
     beMobile();
 
     // mobileNavIcon.addEventListener("click", (e) => {
