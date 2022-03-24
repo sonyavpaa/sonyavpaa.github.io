@@ -243,7 +243,7 @@ leftArrow.addEventListener("click", (e) => {
 });
 
 function beMobile () {
-  
+  console.log("here");
      mobileNav.addEventListener("click", (e) => {
       mobileNavUl.style.visibility = "visible";
       mobileNavUl.style.zIndex = "3";
