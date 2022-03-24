@@ -257,6 +257,7 @@ function beMobile () {
         });
         link.addEventListener("click", (e) => {
           mobileNavUl.style.visibility = "hidden";
+          console.log("clicked link");
           mobileNavUl.style.zIndex = "0";
         });
       });
