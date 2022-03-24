@@ -126,10 +126,10 @@ function boxChanges() {
   stickyContainer.style.height = boxHeight + "px";
 }
 
+  let device = "desktop";
 // checks the device used
 function checkDevice() {
   const agent = navigator.userAgent.toLocaleLowerCase();
-  let device = "desktop";
   if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(agent)) {
     device = "tablet";
   } else if (
