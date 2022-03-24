@@ -191,7 +191,7 @@ const navFunc = () => {
 function mobileNavVisible(device) {
     console.log("inside MobilenavVisible() before if");
   if (device === "mobile" || intro.offsetWidth <= 810) 
-  console.log("inside MobilenavVisible() after if");{
+  {console.log("inside MobilenavVisible() after if");
     // mobileNav.style.visibility = "visible";
     beMobile();
 
