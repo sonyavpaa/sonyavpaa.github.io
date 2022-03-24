@@ -658,7 +658,7 @@ input {
       justify-content: end;
     }
 
-    .mobileNavIcon {
+    .mobileNav, .mobileNavIcon {
       cursor: pointer;
 
     }
