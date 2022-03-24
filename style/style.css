@@ -673,7 +673,7 @@ input {
       background-color: var(--clr__background03);
       visibility: hidden;
       text-align: end;
-      border: 1px solid red;
+
     }
 
     .mobileNav li {

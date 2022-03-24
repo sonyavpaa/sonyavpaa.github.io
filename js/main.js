@@ -252,7 +252,7 @@ function beMobile () {
       mobileNavUl.style.zIndex = "3";
 
       mobileNavUl.querySelectorAll("li").forEach((link) => {
-        window.addEventListener("mouseup", (e) => {
+        window.addEventListener("click", (e) => {
           mobileNavUl.style.visibility = "hidden";
         });
         link.addEventListener("click", (e) => {
