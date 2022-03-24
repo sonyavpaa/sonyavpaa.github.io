@@ -253,7 +253,7 @@ function beMobile () {
 
       mobileNavUl.querySelectorAll("li").forEach((link) => {
         window.addEventListener("click", (e) => {
-          mobileNavUl.style.visibility = "hidden";
+          // mobileNavUl.style.visibility = "hidden";
         });
         link.addEventListener("click", (e) => {
           mobileNavUl.style.visibility = "hidden";
