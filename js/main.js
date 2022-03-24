@@ -243,8 +243,8 @@ leftArrow.addEventListener("click", (e) => {
 });
 
 function beMobile () {
-  mobileNavIcon.style.cursor = "pointer";
-     mobileNavIcon.addEventListener("click", (e) => {
+  
+     mobileNav.addEventListener("click", (e) => {
       mobileNavUl.style.visibility = "visible";
       mobileNavUl.style.zIndex = "3";
 
