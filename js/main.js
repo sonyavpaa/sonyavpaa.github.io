@@ -242,7 +242,7 @@ leftArrow.addEventListener("click", (e) => {
   console.log(logoBox1);
 });
 
-function beMobile () => {
+function beMobile () {
   mobileNav.style.visibility = "visible";
      mobileNavIcon.addEventListener("click", (e) => {
       mobileNavUl.style.visibility = "visible";
